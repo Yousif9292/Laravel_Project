@@ -18,16 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/', function () {
-//     return view('index');
-// });
-// Route::get('/', function () {
-//     return view('register');
-// });
-
-
 Route::get('/dashboard', function () {
-    return view('dashboard1');
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
